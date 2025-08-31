@@ -1,0 +1,142 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+    local Window = Rayfield:CreateWindow({
+    Name = "2K TRIAD",                  -- Name of your window
+    Icon = 0,                           -- Icon for the topbar (0 means no icon)
+    LoadingTitle = "2K TRIAD",          -- Title displayed while loading
+    LoadingSubtitle = "by CLUNJOVNZ",   -- Subtitle displayed while loading
+    ShowText = "Rayfield",              -- For mobile users, text to unhide Rayfield
+    Theme = "Default",                  -- Theme for the UI
+    ToggleUIKeybind = "K",              -- Keybind to toggle UI visibility
+    DisableRayfieldPrompts = false,     -- Disable Rayfield's prompts
+    DisableBuildWarnings = false,       -- Disable build warnings
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,                -- Custom folder for saving configurations
+        FileName = "Big Hub"             -- File name for saving
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    
+    KeySystem =true, -- Set this to true to use our key system
+    KeySettings = {
+        Title = "2K TRIAD",
+        Subtitle = "LINK IN DISCORD",
+        Note = "2K TRIAD ONTOP", -- Use this to tell the user how to get a key
+        FileName = "Check Discord For Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+        SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+        GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+        Key = {"TRIADMAINCHEAT"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+    })
+
+    Rayfield:Notify({
+    Title = "2K TRIAD",
+    Content = "Thankyou For Using 2K TRIAD Script",
+    Duration = 5,
+    Image = nil,
+    })
+
+    local PlayerTab = Window:CreateTab("Triad Main", 4483362458) 
+local Section =PlayerTab:CreateSection("TRIAD MAIN CHEAT")
+    local AimbotButton = PlayerTab:CreateButton({
+    Name = "TRIAD | AIMBOT",
+    Callback = function()
+        local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()Aimbot.Load()
+    end,
+    })
+
+    local BigHeadButton = PlayerTab:CreateButton({
+    Name = "TRIAD | BIG HEAD",
+    Callback = function()
+        _G.HeadSize = 4 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 0.4 v.Character.Head.BrickColor = BrickColor.new("Red") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
+
+    end,
+    })
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bnsshiva8-art/Esp/f563fd7c275b80dd67cf6410b8ebe324ff39d582/Hub"))()
+    end,
+    })
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | TP TOOLS",
+    Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CnrzahUZ"))()
+    end,
+    })
+
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | LOOP BRING", 
+    Callback = function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Bring-All-Client-Sided-Universal-36570"))()
+    end,
+    })
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | TOUCH FLING",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bnsshiva8-art/FLing/54ef209d2dbbef7361792625debfa1a68b3c9a28/Touch"))()
+    end,
+    })
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | FLING ALL",
+    Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+    end,
+    })
+
+
+    local Button = PlayerTab:CreateButton({
+    Name = "TRIAD | FLY",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/qAxAp/DioFly/main/DioFly.lua'))()
+    end,
+    })
+
+local SpawnerTab = Window:CreateTab("Spawner", 4483362458) -- Title, Image
+
+local Section = SpawnerTab:CreateSection("SPAWN GUN")
+
+local Button = SpawnerTab:CreateButton({
+    Name = "TRIAD | ALL CITY SP",
+    Callback = function()
+        local args = {
+            [1] = "Silenced Pistol",
+            [2] = -1000000
+        }
+
+        game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("Silenced Pistol", -10000)
+    end,
+})
+
+local Button = SpawnerTab:CreateButton({
+   Name = "TRIAD | ALL CITY GLOCK-17",
+   Callback = function()
+  local args = {
+    [1] = "Silenced Pistol",
+    [2] = -1000000
+}
+
+game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("Glock-17", -10000)
+   end,
+})
+
+local Button = SpawnerTab:CreateButton({
+   Name = "TRIAD | ALL CITY Desert Deagle",
+   Callback = function()
+  local args = {
+    [1] = "Silenced Pistol",
+    [2] = -1000000
+}
+
+game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("Desert Deagle", -10000)
+   end,
+})
