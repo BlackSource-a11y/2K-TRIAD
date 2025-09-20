@@ -5,7 +5,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
     Icon = 0,                           -- Icon for the topbar (0 means no icon)
     LoadingTitle = "BERSERK ONTOP!!",          -- Title displayed while loading
     LoadingSubtitle = "by BERSERK",   -- Subtitle displayed while loading
-    ShowText = "Rayfield",              -- For mobile users, text to unhide Rayfield
+    ShowText = "BERSERK ONTOP!!",              -- For mobile users, text to unhide Rayfield
     Theme = "Default",                  -- Theme for the UI
     ToggleUIKeybind = "K",              -- Keybind to toggle UI visibility
     DisableRayfieldPrompts = false,     -- Disable Rayfield's prompts
@@ -25,14 +25,29 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
     })
 
     Rayfield:Notify({
-    Title = "2K TRIAD",
-    Content = "Thankyou For Using 2K TRIAD Script",
+    Title = "BERSERK ONTOP",
+    Content = "Thankyou For Using BERKSERK Script",
     Duration = 5,
     Image = nil,
     })
 
     local PlayerTab = Window:CreateTab("BERSERK MAIN", 4483362458) 
 local Section =PlayerTab:CreateSection("BERKSERK MAIN CHEAT")
+
+local Button = PlayerTab:CreateButton({
+   Name = "INFINITE YIELD [BSK]",
+   Callback = function()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end
+})
+
+local Button = PlayerTab:CreateButton({
+   Name = "MUSIC EXPO [BSK]",
+   Callback = function()
+loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Ac6-Music-Vulnerability-25536"))()
+   end,
+})
+
     local AimbotButton = PlayerTab:CreateButton({
     Name = "AIMBOT  [BSK]",
     Callback = function()
@@ -55,6 +70,7 @@ local Section =PlayerTab:CreateSection("BERKSERK MAIN CHEAT")
     end,
     })
 
+
     local Button = PlayerTab:CreateButton({
     Name = "TP TOOLS  [BSK]",
     Callback = function()
@@ -62,6 +78,49 @@ local Section =PlayerTab:CreateSection("BERKSERK MAIN CHEAT")
     end,
     })
 
+ local Button = PlayerTab:CreateButton({
+ Name = "VISUAL VIRUS  [BSK]", 
+    Callback = function
+-- THIS SCRIPT MADE BY Louie
+local player = game.Players.LocalPlayer
+local gui = player:WaitForChild("PlayerGui")
+
+-- Play loud warning sound
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://138211359" -- loud alarm sound
+sound.Volume = 100
+sound.Looped = true
+sound.Parent = workspace
+sound:Play()
+
+-- Function to create one fake virus window
+local function createWindow()
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local TextLabel = Instance.new("TextLabel")
+
+    ScreenGui.Parent = gui
+
+    Frame.Parent = ScreenGui
+    Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    Frame.Position = UDim2.new(math.random(), 0, math.random(), 0)
+    Frame.Size = UDim2.new(0, 250, 0, 120)
+
+    TextLabel.Parent = Frame
+    TextLabel.Size = UDim2.new(1, 0, 1, 0)
+    TextLabel.BackgroundTransparency = 1
+    TextLabel.Text = "BERSERK ONTOP BOBO MO TOL!!"
+    TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+    TextLabel.TextScaled = true
+end
+
+-- Spawn 1000 frames very fast (spreading effect)
+for i = 1, 1000 do
+    wait(0.01)
+    createWindow()
+end
+  end,
+    })
 
     local Button = PlayerTab:CreateButton({
     Name = "LOOP BRING  [BSK]", 
@@ -155,3 +214,4 @@ local Button = SpawnerTab:CreateButton({
 game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("HK416", -10000)
    end,
 })
+
