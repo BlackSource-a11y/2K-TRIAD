@@ -169,6 +169,18 @@ local Button = SpawnerTab:CreateButton({
 })
 
 local Button = SpawnerTab:CreateButton({
+    Name = "ALL CITY Glock-19 [BSK]",
+    Callback = function()
+        local args = {
+    [1] = "Glock-19",
+    [2] = -1000000
+}
+
+game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("Glock-19", -10000)
+   end,
+})
+
+local Button = SpawnerTab:CreateButton({
    Name = "ALL CITY GLOCK-17  [BSK]",
    Callback = function()
   local args = {
@@ -215,4 +227,17 @@ local Button = SpawnerTab:CreateButton({
 game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("HK416", -10000)
    end,
 })
+
+local Button = SpawnerTab:CreateButton({
+    Name = "ALL CITY UZI [BSK]",
+    Callback = function()
+        local args = {
+    [1] = "UZI",
+    [2] = -1000000
+}
+
+game:GetService("ReplicatedStorage").GunShop.Events.Purchase:FireServer("UZI", -10000)
+   end,
+})
+
 
